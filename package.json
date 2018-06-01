@@ -24,9 +24,6 @@
     "dist:icons": {
       "paths": "src/icons/**/*.{svg,svgz}"
     },
-    "dist:favicons": {
-      "paths": "src/img/favicon.png"
-    },
     "data": {
       "paths": "data-src/**/*"
     }
@@ -51,7 +48,6 @@
     "browsersync": "browser-sync start --proxy \"localhost:8080\" --port 8181 --no-open",
     "start": "coffeekraken-scripts-stack server livereload carpenter browsersync -i start -i dist",
     "server": "gulp server",
-    "test": "coffeekraken-testing-stack",
     "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
   },
   "keywords": [
@@ -82,12 +78,10 @@
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.5",
-    "chai": "^4.1.2",
     "clean-css": "^4.1.9",
     "coffeekraken-carpenter": "^1.0.0",
     "coffeekraken-scripts-stack": "^1.0.1",
     "coffeekraken-template-stack": "git+https://git@github.com/Coffeekraken/template-stack.git#master",
-    "coffeekraken-testing-stack": "0.0.2",
     "commander": "^2.12.2",
     "favicons": "^4.8.6",
     "git-changelog": "^1.1.2",
