@@ -7500,18 +7500,12 @@ window.CustomElements.addModule(function(scope) {
 "use strict";
 
 
-var _cssuseragent = __webpack_require__(131);
-
-var _cssuseragent2 = _interopRequireDefault(_cssuseragent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 // import some dependencies like polyfills, etc...
 // require('@webcomponents/webcomponentsjs');
 // require('@webcomponents/webcomponentsjs/custom-elements-es5-adapter');
 __webpack_require__(129);
 __webpack_require__(133);
-
+__webpack_require__(131);
 __webpack_require__(132);
 
 // main application entry point
