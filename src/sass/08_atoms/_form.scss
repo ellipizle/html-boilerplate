@@ -1,0 +1,4 @@
+@import 'node_modules/coffeekraken-s-form-component/index';
+@include s-form-classes(
+	$colors : default
+);

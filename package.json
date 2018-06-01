@@ -64,6 +64,12 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "coffeekraken-gridle": "3.0.0-rc.4",
+    "coffeekraken-s-button-component": "^1.0.1",
+    "coffeekraken-s-dropdown-component": "^1.0.2",
+    "coffeekraken-s-form-component": "^1.0.1",
+    "coffeekraken-s-table-component": "^1.0.1",
+    "coffeekraken-s-tooltip-component": "^1.0.2",
+    "coffeekraken-s-typography-component": "^1.0.1",
     "coffeekraken-sugar": "^1.0.0",
     "cssuseragent": "^2.1.31",
     "fastclick": "^1.0.6",
