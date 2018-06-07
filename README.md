@@ -3,9 +3,9 @@
 # Coffeekraken HTML Boilerplate <img src=".resources/coffeekraken-logo.jpg" height="25px" />
 
 <p>
-	<a href="https://travis-ci.org/coffeekraken/html-boilerplate">
+	<!-- <a href="https://travis-ci.org/coffeekraken/html-boilerplate">
 		<img src="https://img.shields.io/travis/coffeekraken/html-boilerplate.svg?style=flat-square" />
-	</a>
+	</a> -->
 	<!-- <a href="https://www.npmjs.com/package/{package-name}">
 		<img src="https://img.shields.io/npm/v/{package-name}.svg?style=flat-square" />
 	</a> -->
