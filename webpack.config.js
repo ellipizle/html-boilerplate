@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 module.exports = {
+	watch: true,
+	mode: 'development',
 	entry: {
 		'dist/js/app.js' : './src/js/app.js',
 		'dist/js/template-stack.js': './src/js/template-stack.js'

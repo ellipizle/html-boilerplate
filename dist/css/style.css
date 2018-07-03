@@ -17326,7 +17326,7 @@ button {
   border-color: rgba(132, 142, 145, 0.6);
 }
 
-.form-input:invalid, .form-input[invalid] {
+.form-input[dirty]:invalid, .form-input[dirty][invalid] {
   border-color: #d9534f !important;
 }
 
@@ -17382,11 +17382,11 @@ button {
   border-color: rgba(132, 142, 145, 0.6);
 }
 
-.form-select:invalid, .form-select[invalid] {
+.form-select[dirty]:invalid, .form-select[dirty][invalid] {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'%3E%3Cpolygon points='0,0 32,0 16,24' style='fill:%23d9534f'%3E%3C/polygon%3E%3C/svg%3E");
 }
 
-.form-select:invalid, .form-select[invalid] {
+.form-select[dirty]:invalid, .form-select[dirty][invalid] {
   border-color: #d9534f !important;
 }
 
@@ -17437,7 +17437,7 @@ button {
   border-color: rgba(132, 142, 145, 0.6);
 }
 
-.form-textarea:invalid, .form-textarea[invalid] {
+.form-textarea[dirty]:invalid, .form-textarea[dirty][invalid] {
   border-color: #d9534f !important;
 }
 
