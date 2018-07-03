@@ -12,15 +12,17 @@ Here's some rules to follow in order to all work the same way across projects.
 	- |------- ```_all.scss```
 	- |--- **```03_generic```**
 	- |------- ```_all.scss```
-	- |--- **```04_layout```**
+	- |--- **```04_templates```**
 	- |------- ```_all.scss```
 	- |--- **```05_pages```**
 	- |------- ```_all.scss```
-	- |--- **```06_blocks```**
+	- |--- **```06_organisms```**
 	- |------- ```_all.scss```
-	- |--- **```07_objects```**
+	- |--- **```07_molecules```**
 	- |------- ```_all.scss```
-	- |--- **```08_trumps```**
+	- |--- **```08_atoms```
+	- |------- ```_all.scss```
+	- |--- **```09_trumps```**
 	- |------- ```_all.scss```
 	- |--- ```style.scss```
 2. Each subfolder has to have an ```_all.scss``` file that import all his files
