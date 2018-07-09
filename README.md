@@ -109,13 +109,7 @@ yarn start
 - ```yarn run test``` : Run the tests
 - ```yarn run lint``` : Run the linters
 - ```yarn run lint:js``` : Run the Js linter
-- ```yarn run lint:css` : Run the css linter
-
-"test": "npm run lint",
-    "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "standard 'src/**/*.js'",
-    "lint:css": "stylelint 'src/sass/**/*.scss'",
-
+- ```yarn run lint:css``` : Run the css linter
 - ```yarn run changelog``` : Build the changelog from the git commits ([see here](https://www.npmjs.com/package/git-changelog) for more documentation) 
 
 <a name="readme-browsers-support"></a>
