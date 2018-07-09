@@ -60,9 +60,10 @@ Base HTML files and folder structure with complete build process (js, sass, imag
 3. [Get Started](#readme-get-started)
 4. [Scripts](#readme-scripts)
 5. [Browsers support](#readme-browsers-support)
-6. [Contribute](https://github.com/Coffeekraken/coffeekraken/blob/master/contribute.md)
-7. [Who are Coffeekraken?](https://github.com/Coffeekraken/coffeekraken/blob/master/who-are-we.md)
-8. [Licence](#readme-license)
+6. [Code linting](#readme-code-linting)
+7. [Contribute](https://github.com/Coffeekraken/coffeekraken/blob/master/contribute.md)
+8. [Who are Coffeekraken?](https://github.com/Coffeekraken/coffeekraken/blob/master/who-are-we.md)
+9. [Licence](#readme-license)
 
 <a name="readme-install"></a>
 ## Install
@@ -116,6 +117,16 @@ yarn start
 | IE11+ | last 2 versions| last 2 versions| last 2 versions
 
 > As browsers are automatically updated, we will keep as reference the last two versions of each but this component can work on older ones as well.
+
+<a id="readme-code-linting"></a>
+##  Code linting
+
+This boilerplate uses some code linting rules. Here's the list:
+
+1. [StandardJS](https://standardjs.com/) for javascript files
+2. [Stylelint](https://github.com/stylelint/stylelint) with [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) for `scss` files
+
+> Your commits will not been accepted if the code style is not respected!
 
 <a name="readme-license"></a>
 ## License
