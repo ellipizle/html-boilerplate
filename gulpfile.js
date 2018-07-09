@@ -31,7 +31,7 @@ gulp.task('icons', function(){
 return gulp.src(['src/icons/*.svg'])
 .pipe(iconfontCss({
 	fontName: 'fonticons',
-	path: __dirname + '/src/sass/03_generic/_fonticons.tpl.scss',
+	path: __dirname + '/src/tpl/_fonticons.tpl.scss',
 	targetPath: '../../../src/sass/03_generic/_fonticons.scss',
 	fontPath: '../fonts/fonticons/'
 }))

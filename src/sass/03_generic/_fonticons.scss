@@ -1,99 +1,99 @@
+/* stylelint-disable */
 @font-face {
-	font-family: "fonticons";
-	src: url('../fonts/fonticons/fonticons.eot');
-	src: url('../fonts/fonticons/fonticons.eot?#iefix') format('eot'),
-		url('../fonts/fonticons/fonticons.woff2') format('woff2'),
-		url('../fonts/fonticons/fonticons.woff') format('woff');
+  font-family: "fonticons";
+  src: url('../fonts/fonticons/fonticons.eot');
+  src: url('../fonts/fonticons/fonticons.eot?#iefix') format('eot'),
+    url('../fonts/fonticons/fonticons.woff2') format('woff2'),
+    url('../fonts/fonticons/fonticons.woff') format('woff');
 }
 
 @mixin icon-styles(
-	$position : after
+  $position : after
 ) {
-	min-width:1em;
-	min-height:1em;
-	position:relative;
-	display:inline-block;
-	vertical-align: middle;
+  min-width:1em;
+  min-height:1em;
+  position:relative;
+  display:inline-block;
+  vertical-align: middle;
 
-	&:#{$position} {
-		font: normal normal normal 1em/1 "fonticons";
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		display:block;
-		position:absolute;
-		width:1em; height:1em;
-		top:50%; left:50%;
-		@include s-translate(-50%,-50%);
-		// vertical-align: middle;
-	}
+  &:#{$position} {
+    font: normal normal normal 1em/1 "fonticons";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display:block;
+    position:absolute;
+    width:1em; height:1em;
+    top:50%; left:50%;
+    @include s-translate(-50%,-50%);
+  }
 }
 
 $icons : ();
 
-	$icons : append($icons, angle-down);
+  $icons : append($icons, angle-down);
 
-	$icons : append($icons, angle-left);
+  $icons : append($icons, angle-left);
 
-	$icons : append($icons, angle-right);
+  $icons : append($icons, angle-right);
 
-	$icons : append($icons, angle-up);
+  $icons : append($icons, angle-up);
 
 
 @mixin icon(
-	$icon,
-	$position : before
+  $icon,
+  $position : before
 ) {
-	@include icon-styles($position);
-	
-		@if $icon == angle-down {
-			&:#{$position} {
-				content: "\E001";
-				@content;
-			}
-		}
-	
-		@if $icon == angle-left {
-			&:#{$position} {
-				content: "\E002";
-				@content;
-			}
-		}
-	
-		@if $icon == angle-right {
-			&:#{$position} {
-				content: "\E003";
-				@content;
-			}
-		}
-	
-		@if $icon == angle-up {
-			&:#{$position} {
-				content: "\E004";
-				@content;
-			}
-		}
-	
+  @include icon-styles($position);
+  
+    @if $icon == angle-down {
+      &:#{$position} {
+        content: "\E001";
+        @content;
+      }
+    }
+  
+    @if $icon == angle-left {
+      &:#{$position} {
+        content: "\E002";
+        @content;
+      }
+    }
+  
+    @if $icon == angle-right {
+      &:#{$position} {
+        content: "\E003";
+        @content;
+      }
+    }
+  
+    @if $icon == angle-up {
+      &:#{$position} {
+        content: "\E004";
+        @content;
+      }
+    }
+  
 }
 
 .icon:before {
-	@include icon-styles(before);
+  @include icon-styles(before);
 }
 
 
 .icon-angle-down {
-	@include icon(angle-down, before);
+  @include icon(angle-down, before);
 }
 
 .icon-angle-left {
-	@include icon(angle-left, before);
+  @include icon(angle-left, before);
 }
 
 .icon-angle-right {
-	@include icon(angle-right, before);
+  @include icon(angle-right, before);
 }
 
 .icon-angle-up {
-	@include icon(angle-up, before);
+  @include icon(angle-up, before);
 }
 
 
@@ -110,3 +110,5 @@ $icons : ();
  * <i class="icon icon-angle-up s-bigger"></i>
 
  */
+
+/* stylelint-enable */

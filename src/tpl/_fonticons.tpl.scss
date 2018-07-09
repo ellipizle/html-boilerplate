@@ -1,0 +1,73 @@
+/* stylelint-disable */
+@font-face {
+  font-family: "<%= fontName %>";
+  src: url('<%= fontPath %><%= fontName %>.eot');
+  src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+    url('<%= fontPath %><%= fontName %>.woff2') format('woff2'),
+    url('<%= fontPath %><%= fontName %>.woff') format('woff');
+}
+
+@mixin <%= cssClass %>-styles(
+  $position : after
+) {
+  min-width:1em;
+  min-height:1em;
+  position:relative;
+  display:inline-block;
+  vertical-align: middle;
+
+  &:#{$position} {
+    font: normal normal normal 1em/1 "<%= fontName %>";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display:block;
+    position:absolute;
+    width:1em; height:1em;
+    top:50%; left:50%;
+    @include s-translate(-50%,-50%);
+  }
+}
+
+$icons : ();
+<% _.each(glyphs, function(glyph) { %>
+  $icons : append($icons, <%= glyph.fileName %>);
+<% }); %>
+
+@mixin icon(
+  $icon,
+  $position : before
+) {
+  @include <%= cssClass %>-styles($position);
+  <% _.each(glyphs, function(glyph) { %>
+    @if $icon == <%= glyph.fileName %> {
+      &:#{$position} {
+        content: "\<%= glyph.codePoint %>";
+        @content;
+      }
+    }
+  <% }); %>
+}
+
+.<%= cssClass %>:before {
+  @include <%= cssClass%>-styles(before);
+}
+
+<% _.each(glyphs, function(glyph) { %>
+.<%= cssClass %>-<%= glyph.fileName %> {
+  @include icon(<%= glyph.fileName %>, before);
+}
+<% }); %>
+
+
+
+/**
+ * @name 	Icons
+ * Display an icon
+ * @styleguide 		Generic / Icons
+ * @example 		html
+<% _.each(glyphs, function(glyph) { %> * <i class="icon icon-<%= glyph.fileName %> s-bigger"></i>
+<% }); %>
+ */
+
+/* stylelint-enable */
+

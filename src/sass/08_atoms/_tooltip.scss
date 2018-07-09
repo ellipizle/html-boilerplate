@@ -1,7 +1,9 @@
 @import 'node_modules/coffeekraken-s-tooltip-component/index';
+
 @include s-tooltip-classes(
-	$colors : default
+  $colors: default
 );
+
 .tooltip {
-	white-space: nowrap;
+  white-space:nowrap;
 }
