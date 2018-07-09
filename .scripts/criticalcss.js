@@ -10,7 +10,7 @@ program
   .version('1.0.0')
   .option('-o, --output [value]', 'Output critical css file', 'dist/css/critical.css')
   .option('-c, --css [value]', 'Css file to use to generate critical one', 'dist/css/style.css')
-  .option('-p, --pages <items>', 'List of pages urls to process', null)
+  .option('-p, --pages <items>', 'List of pages urls to process (space separated). If null, take the pages.json file if exists as urls source', null)
   .option('-h, --host [value]', 'Hostname on which to make pages requests', 'http://localhost:8080')
   .option('-w --width <n>', 'Width of the viewport to calculate the critical css', 1200)
   .option('-h --height <n>', 'Height of the viewport to calculate the critical css', 900)
