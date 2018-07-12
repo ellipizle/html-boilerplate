@@ -160,7 +160,7 @@ eval("module.exports = {\"home\":{\"title\":\"Homepage\",\"url\":\"/\"}};\n\n//#
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _coffeekrakenTemplateStack = __webpack_require__(/*! coffeekraken-template-stack */ \"./node_modules/coffeekraken-template-stack/dist/js/app.js\");\n\nvar _coffeekrakenTemplateStack2 = _interopRequireDefault(_coffeekrakenTemplateStack);\n\nvar _pages = __webpack_require__(/*! ../../pages.json */ \"./pages.json\");\n\nvar _pages2 = _interopRequireDefault(_pages);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nnew _coffeekrakenTemplateStack2.default({\n\tpages: _pages2.default\n});\n\n//# sourceURL=webpack:///./src/js/template-stack.js?");
+eval("\n\nvar _coffeekrakenTemplateStack = __webpack_require__(/*! coffeekraken-template-stack */ \"./node_modules/coffeekraken-template-stack/dist/js/app.js\");\n\nvar _coffeekrakenTemplateStack2 = _interopRequireDefault(_coffeekrakenTemplateStack);\n\nvar _pages = __webpack_require__(/*! ../../pages.json */ \"./pages.json\");\n\nvar _pages2 = _interopRequireDefault(_pages);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(function () {\n  return new _coffeekrakenTemplateStack2.default({\n    pages: _pages2.default\n  });\n})();\n\n//# sourceURL=webpack:///./src/js/template-stack.js?");
 
 /***/ })
 

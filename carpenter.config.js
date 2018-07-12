@@ -1,37 +1,37 @@
 module.exports = {
-	// server port
-	port : 3333,
+  // server port
+  port: 3333,
 
-	// title
-	title : '{project-name}',
+  // title
+  title: '{project-name}',
 
-	// logo
-	logo : null,
+  // logo
+  logo: null,
 
-	// documentation settings
-	documentation : {
+  // documentation settings
+  documentation: {
 
-		// files (glob patterns)
-		files : [
-			'README.md',
-			'node_modules/coffeekraken-sugar/**/*.md',
-			'node_modules/coffeekraken-gridle/**/*.md',
-			'node_modules/coffeekraken-s-*/**/*.md',
-		]
-	},
+    // files (glob patterns)
+    files: [
+      'README.md',
+      'node_modules/coffeekraken-sugar/**/*.md',
+      'node_modules/coffeekraken-gridle/**/*.md',
+      'node_modules/coffeekraken-s-*/**/*.md'
+    ]
+  },
 
-	// styleguide file
-	styleguide : {
+  // styleguide file
+  styleguide: {
 
-		// source styleguide files
-		files : [
-			'dist/css/style.css',
-			'dist/js/app.js'
-		],
+    // source styleguide files
+    files: [
+      'dist/css/style.css',
+      'dist/js/app.js'
+    ],
 
-		// additionnal displays files to load
-		displays : [
-			'node_modules/coffeekraken-gridle/carpenter.displays.js'
-		]
-	}
+    // additionnal displays files to load
+    displays: [
+      'node_modules/coffeekraken-gridle/carpenter.displays.js'
+    ]
+  }
 }

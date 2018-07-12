@@ -1,7 +1,6 @@
-const webpackConfig = require('./webpack.config');
-const _merge = require('lodash/merge');
-const _webpack = require('webpack');
+const webpackConfig = require('./webpack.config')
+const _merge = require('lodash/merge')
 
 module.exports = _merge(webpackConfig, {
-	mode: 'production'
-});
+  mode: 'production'
+})
