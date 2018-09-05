@@ -35,7 +35,7 @@ Base HTML files and folder structure with complete build process (js, sass, imag
 
 - Complete build process
 	- Javascript files compiling (ES6, etc...)
-	- CSS files compiling (SASS, SCSS)
+	- CSS files compiling (SASS, SCSS) + Autoprefixr
 	- Images compression
 	- Icons font generation from svg files
 	- Auto-build through files monitoring
