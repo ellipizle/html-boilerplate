@@ -2,7 +2,7 @@
 
 require_once 'layout/header.php';
 
-print t_render_blade('welcome', [
+print Thorin::render_blade('welcome', [
 	'title' => 'Hello World'
 ]);
 

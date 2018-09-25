@@ -6,17 +6,8 @@ header("strict-transport-security: max-age=0"); // disable HSTS
 // report all errors for debuging purposes
 error_reporting(E_ALL);
 
-// config
-require_once 'app/config.php';
-
-// functions
-require_once 'app/functions.php';
-
-// composer
-require_once 'vendor/autoload.php';
-
-// faker
-$faker = Faker\Factory::create();
+// bootstrap
+require_once 'app/bootstrap.php';
 
 // process request
 isset($_SERVER['QUERY_STRING']) ?: $_SERVER['QUERY_STRING'] = '';

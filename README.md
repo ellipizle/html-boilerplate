@@ -56,6 +56,8 @@ Base HTML files and folder structure with complete build process (js, sass, imag
 - [Coffeekraken carpenter](https://github.com/coffeekraken/carpenter) integrated
 - [Coffeekraken sugar](https://github.com/coffeekraken/sugar) integrated
 - [Coffeekraken gridle](https://github.com/coffeekraken/gridle) integrated
+- [FakerPHP](https://github.com/fzaninotto/Faker) built in under the `$faker` variable
+- [Dwarvesforge Thorin](https://github.com/Dwarvesforge/thorin) built in
 
 ## Table of content
 

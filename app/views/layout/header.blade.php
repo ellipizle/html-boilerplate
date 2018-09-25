@@ -98,7 +98,7 @@
 		{!! @$html !!}
 
 	</head>
-	<body class="clear-transmations {{ $body_class }}">
+	<body class="clear-transmations {{ @$body_class }}">
 
 		@if (@$google_tag_manager_id)
 			<!-- Google Tag Manager (noscript) -->

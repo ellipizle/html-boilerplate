@@ -1,9 +1,10 @@
 <?php
 
-print t_render_blade('layout/header', [
-	'root_url' => t_root_url(),
+print Thorin::render_blade('layout/header', [
+	'root_url' => Thorin::root_url(),
 	'lang' => 'en',
-	'charset' => 'utf-8',
+  'charset' => 'utf-8',
+  'viewport' => null,
 	'title' => 'Coffeekraken HTML Boilerplate',
 	'description' => 'Base HTML files and folder structure with complete build process (js, sass, image compression, etc...) built in',
 	'keywords' => [
@@ -11,10 +12,10 @@ print t_render_blade('layout/header', [
 		'html',
 		'boilerplate'
 	],
-	'sharing_image' => t_asset_url('img/sharing.png'),
+	'sharing_image' => Thorin::asset_url('img/sharing.png'),
 	'body_class' => null,
 	'stylesheets' => [
-		t_asset_path('css/style.css')
+		Thorin::asset_path('css/style.css')
 	],
 	'scripts' => [],
 	// 'og' => (object) [
@@ -28,6 +29,8 @@ print t_render_blade('layout/header', [
 	// 	'title' => 'Coffeekraken HTML Boilerplate',
 	// 	'description' => 'Base HTML files and folder structure with complete build process (js, sass, image compression, etc...) built in',
 	// 	'image' => t_asset_url('img/sharing.png')
-	// ],
+  // ],
+  'critical_css' => null,
+  'google_tag_manager_id' => null,
 	'html' => null
 ]);
