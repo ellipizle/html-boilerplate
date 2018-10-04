@@ -29,7 +29,7 @@
     "dist": "npm run dist:fonts && npm run dist:icons && npm run dist:css && npm run dist:js && npm run dist:img && npm run dist:favicons",
     "dist:js": "webpack",
     "dist:css": "node-sass src/sass/style.scss dist/css/style.css  --include-path node_modules --output-style expanded && npm run dist:css:autoprefixr",
-    "dist:css:autoprefixr": "postcss dist/css/style.css --use autoprefixer -d dist/css",
+    "dist:css:autoprefixr": "postcss dist/css/style.css --use autoprefixer -d dist/css --no-map",
     "dist:img": "rm -rf dist/img && node .scripts/imagemin.js -s src/img -o dist/img",
     "dist:fonts": "rm -rf dist/fonts && cp -R src/fonts dist/fonts",
     "dist:icons": "gulp icons",
