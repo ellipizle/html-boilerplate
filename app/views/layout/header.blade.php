@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="{{ $lang or 'en' }}">
+<html lang="{{ $lang }}">
 	<head>
 		<!-- Config -->
-		<meta charset="{{ $charset or 'utf-8' }}">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="viewport" content="{{ $viewport or 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' }}">
+		<meta charset="{{ $charset }}">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    @if (@$viewport)
+      <meta name="viewport" content="{{ $viewport }}">
+    @else
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    @endif
 
 		<!-- Metas -->
 		@if (@$title)
@@ -19,34 +23,34 @@
 
 		@if (@$og !== false)
 			<!-- Schema.org markup for Facebook -->
-			@if (@$og->url || @$root_url)
-				<meta property="og:url" content="{{ $og->url or $root_url }}" />
+			@if (@$root_url)
+				<meta property="og:url" content="{{ $root_url }}" />
 			@endif
 			<meta property="og:type" content="website" />
-			@if (@$og->title || @$title)
-				<meta property="og:title" content="{{ $og->title or $title }}" />
+			@if (@$title)
+				<meta property="og:title" content="{{ $title }}" />
 			@endif
-			@if (@$og->description || @$description)
-				<meta property="og:description" content="{{ $og->description or $description }}" />
+			@if (@$description)
+				<meta property="og:description" content="{{ $description }}" />
 			@endif
-			@if (@$og->image || @$sharing_image)
-				<meta property="og:image" content="{{ $og->image or $sharing_image }}" />
+			@if (@$sharing_image)
+				<meta property="og:image" content="{{ $sharing_image }}" />
 			@endif
 		@endif
 
 		@if (@$twitter !== false)
 			<!-- Schema.org markup for Twitter -->
-			@if (@$twitter->url || @$root_url)
-				<meta name="twitter:url" content="{{ $twitter->url or $root_url }}">
+			@if (@$root_url)
+				<meta name="twitter:url" content="{{ $root_url }}">
 			@endif
-			@if (@$twitter->title || @$title)
-				<meta name="twitter:title" content="{{ $twitter->title or $title }}">
+			@if (@$title)
+				<meta name="twitter:title" content="{{ $title }}">
 			@endif
-			@if (@$twitter->description || @$description)
-				<meta name="twitter:description" content="{{ $twitter->description or $description }}">
+			@if (@$description)
+				<meta name="twitter:description" content="{{ $description }}">
 			@endif
-			@if (@$twitter->image || @$sharing_image)
-				<meta name="twitter:image:src" content="{{ $twitter->image or $sharing_image }}">
+			@if (@$sharing_image)
+				<meta name="twitter:image:src" content="{{ $sharing_image }}">
 			@endif
 		@endif
 
@@ -98,7 +102,7 @@
 		{!! @$html !!}
 
 	</head>
-	<body class="clear-transmations {{ @$body_class }}">
+	<body class="{{ @$body_class }}">
 
 		@if (@$google_tag_manager_id)
 			<!-- Google Tag Manager (noscript) -->

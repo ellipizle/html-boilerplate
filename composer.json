@@ -11,6 +11,6 @@
   ],
   "require": {
     "dwarvesforge/thorin" : "^1.0.0",
-    "fzaninotto/faker": "^1.7"
+    "slim/slim-skeleton": "^3.1"
   }
 }

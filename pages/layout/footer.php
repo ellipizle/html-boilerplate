@@ -7,6 +7,5 @@ print Thorin::render_blade('layout/footer', [
 	'webfonts' => [
 		'Roboto:300,400,800'
 	],
-	'ga' => 'UA-XXXXX-Y',
 	'html' => null
 ]);
