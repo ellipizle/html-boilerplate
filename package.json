@@ -47,6 +47,7 @@
     "start": "coffeekraken-scripts-stack dist:js server livereload carpenter browsersync -i start -i dist",
     "server": "gulp server",
     "pretty-quick": "pretty-quick",
+    "pretty-quick-staged": "pretty-quick --staged > /dev/null 2>&1",
     "prettier": "prettier --write 'src/sass/**/*.scss'",
     "test": "jest",
     "lint": "npm run lint:js && npm run lint:css",
@@ -55,7 +56,7 @@
     "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
   },
   "pre-commit": [
-    "pretty-quick --staged",
+    "pretty-quick-staged",
     "test",
     "lint"
   ],
@@ -111,7 +112,7 @@
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-pngquant": "^5.0.0",
     "imagemin-svgo": "^5.2.0",
-    "jest": "^23.3.0",
+    "jest": "^23.6.0",
     "livereload": "^0.6.2",
     "lodash.pluck": "^3.1.2",
     "node-sass": "^4.5.0",
