@@ -1,5 +1,5 @@
-const path = require("path");
-const webpack = require("webpack");
+const path = require("path")
+const webpack = require("webpack")
 
 module.exports = {
   watch: true,
@@ -26,4 +26,4 @@ module.exports = {
     ]
   },
   plugins: [new webpack.IgnorePlugin(/vertx/)]
-};
+}

@@ -1,9 +1,9 @@
-const gulp = require("gulp");
-const path = require("path");
-const connect = require("gulp-connect-php");
-const iconfont = require("gulp-iconfont");
-const iconfontCss = require("gulp-iconfont-css");
-const runTimestamp = Math.round(Date.now() / 1000);
+const gulp = require("gulp")
+const path = require("path")
+const connect = require("gulp-connect-php")
+const iconfont = require("gulp-iconfont")
+const iconfontCss = require("gulp-iconfont-css")
+const runTimestamp = Math.round(Date.now() / 1000)
 
 /**
  * Server
@@ -15,9 +15,9 @@ gulp.task("server-connect", function() {
     base: "public",
     rooter: "index.php",
     ini: ".docker/php.ini"
-  });
-});
-gulp.task("server", ["server-connect"]);
+  })
+})
+gulp.task("server", ["server-connect"])
 
 /**
  * Icons
@@ -41,5 +41,5 @@ gulp.task("icons", function() {
         timestamp: runTimestamp // recommended to get consistent builds when watching files
       })
     )
-    .pipe(gulp.dest("public/dist/fonts/fonticons"));
-});
+    .pipe(gulp.dest("public/dist/fonts/fonticons"))
+})
