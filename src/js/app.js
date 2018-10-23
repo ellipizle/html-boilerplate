@@ -1,10 +1,10 @@
 // import some dependencies like polyfills, etc...
-require('babel-polyfill')
-require('webcomponents.js/webcomponents-lite')
-require('cssuseragent')
-require('fastclick')
+import "babel-polyfill";
+import "webcomponents.js/webcomponents-lite";
+import "cssuseragent";
+import "fastclick";
 
 // main application entry point
-require('./webcomponent-import')
-require('./webcomponent-props')
-require('./main')
+import "./webcomponent-import";
+import "./webcomponent-props";
+import "./main";

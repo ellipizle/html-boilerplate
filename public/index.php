@@ -8,20 +8,29 @@ header("Content-Type: text/html"); // fix bug with slim and some hosting
 error_reporting(E_ALL);
 
 // bootstrap
-require_once 'app/bootstrap.php';
+require_once '../app/bootstrap.php';
+
+// composer
+require_once '../vendor/autoload.php';
 
 // slim app
-$app = new \Slim\App;
+$configuration = [
+  'settings' => [
+      'displayErrorDetails' => true,
+  ],
+];
+$c = new \Slim\Container($configuration);
+$app = new \Slim\App($c);
 
 // routes
-require_once 'app/routes.php';
+require_once '../app/routes.php';
 
 // inject livereload
 $app->add(function ($request, $response, $next) {
   $response = $next($request, $response);
   $newResponse = new \Slim\Http\Response();
   $newResponse->getBody()->write( injectLivereload($response->getBody()) );
-	return $newResponse;
+  return $newResponse;
 });
 
 // remove trailing slash
@@ -44,5 +53,3 @@ $app->add(function ($request, $response, callable $next) {
 
 // run the app
 $app->run();
-
-?>

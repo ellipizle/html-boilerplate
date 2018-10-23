@@ -1,10 +1,7 @@
 <?php
 
 // config
-require_once __DIR__ . '/config.php';
+define('T_CONFIG_PATH', __DIR__ . '/config/');
 
 // functions
 require_once __DIR__ . '/functions.php';
-
-// composer
-require_once __DIR__ . '/../vendor/autoload.php';

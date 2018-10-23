@@ -1,14 +1,14 @@
 /**
  * Responsive spaces if gridle is available
  */
-@if function-exists('g-get-states-names') {
+@if function-exists("g-get-states-names") {
   @each $stateName in g-get-states-names() {
-    @if $stateName != 'default' {
-      @each $spaceName, $spaceValue in s-setting('spaces') {
-        $spaceNameForClassname : "-#{$spaceName}";
+    @if $stateName != "default" {
+      @each $spaceName, $spaceValue in s-setting("spaces") {
+        $spaceNameForClassname: "-#{$spaceName}";
 
         @if $spaceName == default {
-          $spaceNameForClassname : "";
+          $spaceNameForClassname: "";
         }
 
         @include g-state($stateName) {

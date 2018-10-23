@@ -1,12 +1,12 @@
-@if function-exists('g-custom-class') {
-  @each $sizeName, $sizeValue in s-setting('sizes') {
-    $sizeNameForClassname : $sizeName;
+@if function-exists("g-custom-class") {
+  @each $sizeName, $sizeValue in s-setting("sizes") {
+    $sizeNameForClassname: $sizeName;
 
     @if $sizeName == default {
-      $sizeNameForClassname : null;
+      $sizeNameForClassname: null;
     }
 
-    @include g-custom-class(('s','-',$sizeNameForClassname,'@','%state')) {
+    @include g-custom-class(("s", "-", $sizeNameForClassname, "@", "%state")) {
       @if g-current-state-name() != default {
         /**
          * @name  			```.s-#{$sizeName}@#{g-current-state-name()}```

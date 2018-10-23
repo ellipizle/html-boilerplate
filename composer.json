@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "dwarvesforge/thorin" : "^1.0.0",
-    "slim/slim-skeleton": "^3.1"
+    "dwarvesforge/thorin": "1.1.*",
+    "slim/slim-skeleton": "^3.1",
+    "vlucas/phpdotenv": "^2.5"
   }
 }

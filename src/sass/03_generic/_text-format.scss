@@ -65,9 +65,6 @@
     padding-left: s-space(default);
     border-left: s-rem(3px) solid s-color(default);
 
-    @include s-font(
-      $size: s-rem(30px),
-      $style: italic
-    );
+    @include s-font($size: s-rem(30px), $style: italic);
   }
 }

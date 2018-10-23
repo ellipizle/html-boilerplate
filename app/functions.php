@@ -6,10 +6,9 @@
  * @param    {String}    $html    The html where to inject livereload
  */
 function injectLivereload($html) {
+
   // template stack injection
-  if (@$_ENV &&
-    (@$_ENV['ENVIRONMENT'] === 'development' || @$_ENV['ENVIRONMENT'] === 'testing')
-  ) {
+  if (Thorin::is_environment('development','testing')) {
     $html = str_replace('</body>', '
       <!-- template stack -->
       <script src="/dist/js/template-stack.js"></script>
@@ -18,7 +17,7 @@ function injectLivereload($html) {
   }
 
   // live reload injection
-  if (@$_ENV && @$_ENV['ENVIRONMENT'] === 'development') {
+  if (Thorin::is_environment('development')) {
     $html = str_replace('</body>', '
       <!-- LiveReload -->
       <script>
@@ -27,4 +26,7 @@ function injectLivereload($html) {
       </body>
     ', $html);
   }
+
+  // return the injected html
+  return $html;
 }

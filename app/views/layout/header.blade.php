@@ -23,8 +23,8 @@
 
 		@if (@$og !== false)
 			<!-- Schema.org markup for Facebook -->
-			@if (@$root_url)
-				<meta property="og:url" content="{{ $root_url }}" />
+			@if (@$current_url)
+				<meta property="og:url" content="{{ $current_url }}" />
 			@endif
 			<meta property="og:type" content="website" />
 			@if (@$title)
@@ -40,8 +40,8 @@
 
 		@if (@$twitter !== false)
 			<!-- Schema.org markup for Twitter -->
-			@if (@$root_url)
-				<meta name="twitter:url" content="{{ $root_url }}">
+			@if (@$current_url)
+				<meta name="twitter:url" content="{{ $current_url }}">
 			@endif
 			@if (@$title)
 				<meta name="twitter:title" content="{{ $title }}">
@@ -89,6 +89,8 @@
 			@endforeach
 		@endif
 
+    {!! @$html !!}
+
 		@if (@$google_tag_manager_id)
 			<!-- Google Tag Manager -->
 			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -99,7 +101,16 @@
 			<!-- End Google Tag Manager -->
 		@endif
 
-		{!! @$html !!}
+    @if (@$google_analytics_id)
+      <!-- Global Site Tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ $google_analytics_id }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ $google_analytics_id }}');
+      </script>
+    @endif
 
 	</head>
 	<body class="{{ @$body_class }}">

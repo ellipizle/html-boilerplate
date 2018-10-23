@@ -1,5 +1,3 @@
-@import 'node_modules/coffeekraken-s-dropdown-component/index';
+@import "node_modules/coffeekraken-s-dropdown-component/index";
 
-@include s-dropdown-classes(
-  $colors: default
-);
+@include s-dropdown-classes($colors: default);
