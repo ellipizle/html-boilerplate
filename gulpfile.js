@@ -8,7 +8,7 @@ const runTimestamp = Math.round(Date.now() / 1000)
 /**
  * Server
  */
-gulp.task("server-connect", () => {
+gulp.task("server", function() {
   connect.server({
     hostname: "0.0.0.0",
     port: 8080,
@@ -17,12 +17,11 @@ gulp.task("server-connect", () => {
     ini: ".docker/php.ini"
   })
 })
-gulp.task("server", ["server-connect"])
 
 /**
  * Icons
  */
-gulp.task("icons", () => {
+gulp.task("icons", function() {
   return gulp
     .src(["src/icons/*.svg"])
     .pipe(

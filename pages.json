@@ -1,6 +1,10 @@
 {
-  "home" : {
-    "title" : "Homepage",
+  "home": {
+    "title": "Homepage",
     "url": "/"
+  },
+  "contact": {
+    "title": "Contact",
+    "url": "/contact"
   }
 }
