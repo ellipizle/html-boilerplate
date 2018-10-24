@@ -25,14 +25,6 @@ $app = new \Slim\App($c);
 // routes
 require_once '../app/routes.php';
 
-// inject livereload
-$app->add(function ($request, $response, $next) {
-  $response = $next($request, $response);
-  $newResponse = new \Slim\Http\Response();
-  $newResponse->getBody()->write( injectLivereload($response->getBody()) );
-  return $newResponse;
-});
-
 // remove trailing slash
 $app->add(function ($request, $response, callable $next) {
   $uri = $request->getUri();

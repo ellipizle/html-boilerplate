@@ -6,19 +6,6 @@ const iconfontCss = require("gulp-iconfont-css")
 const runTimestamp = Math.round(Date.now() / 1000)
 
 /**
- * Server
- */
-gulp.task("server", function() {
-  connect.server({
-    hostname: "0.0.0.0",
-    port: 8080,
-    base: "public",
-    rooter: "index.php",
-    ini: ".docker/php.ini"
-  })
-})
-
-/**
  * Icons
  */
 gulp.task("icons", function() {

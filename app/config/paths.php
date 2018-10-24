@@ -1,7 +1,6 @@
 <?php
 
 return [
-
 	/**
 	 * @name 	DOCUMENT_ROOT
 	 * Specify the root path where your app is stored absolute to the server root folder.
@@ -15,6 +14,7 @@ return [
 	/**
 	 * @name 		BASE
 	 * Specify where the base folder of the project is stored absolute to the server root folder.
+	 * This is not the DOCUMENT_ROOT. It represent the root of the files. The DOCUMENT_ROOT can be a subfolder of this one.
 	 * Need to end with a trailing /
 	 * @type  		{String}
 	 * @default 	${app.ROOT_PATH}../
@@ -34,6 +34,7 @@ return [
 	 * @name 		ASSETS
 	 * Specify where the assets (images, etc...) are stored absolute to the server root folder.
 	 * Need to end with a trailing /
+	 * This path MUST be inside of the DOCUMENT_ROOT path
 	 * This is bein used in functions like "t_asset_url", "t_asset_path", etc...
 	 * @type 		{String}
 	 * @default 	${app.ROOT_PATH}dist/

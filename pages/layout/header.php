@@ -12,7 +12,7 @@ print Thorin::render_blade('layout/header', [
 	'sharing_image' => Thorin::asset_url('img/sharing.png'),
 	'body_class' => null,
 	'stylesheets' => [
-		Thorin::asset_path('css/style.css')
+		Thorin::asset_url('css/style.css')
 	],
   'scripts' => [],
   'og' => true,
