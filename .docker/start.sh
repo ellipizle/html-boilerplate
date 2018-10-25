@@ -1,5 +1,5 @@
 echo "Creating network..."
-docker network create testing-ploom-brandsite-template-network
+docker network create html-boilerplate-network
 echo "Network created!"
 
 # start the container

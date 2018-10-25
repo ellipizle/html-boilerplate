@@ -5,6 +5,6 @@ import "cssuseragent"
 import "fastclick"
 
 // main application entry point
-import "./webcomponent-import"
 import "./webcomponent-props"
+import "./webcomponent-import"
 import "./main"

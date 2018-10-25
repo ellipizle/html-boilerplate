@@ -1,0 +1,13 @@
+.card {
+  background: white;
+  display: inline-block;
+  width: 70%;
+  padding: s-space(default);
+  max-width: s-rem(600px);
+
+  @include s-depth(10);
+}
+
+.card--centered {
+  @include s-position(absolute, middle, center);
+}
