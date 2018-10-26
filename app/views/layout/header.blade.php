@@ -4,6 +4,13 @@
 		<!-- Config -->
 		<meta charset="{{ $charset }}">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="distribution" content="web">
+    @if (@$noindex)
+      <meta name="robots" content="noindex,nofollow">
+    @else
+      <meta name=”robots” content=”index,follow”>
+    @endif
     @if (@$viewport)
       <meta name="viewport" content="{{ $viewport }}">
     @else

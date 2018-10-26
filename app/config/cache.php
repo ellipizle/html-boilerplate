@@ -3,79 +3,79 @@
 return [
 
 	/**
-	 * @name    DEFAULT_DRIVER
+	 * @name    default_driver
 	 * Specify the default cache driver to use
 	 * @type    {String}
 	 * @default    filesystem
 	 */
-	'DEFAULT_DRIVER' => 'filesystem',
+	'default_driver' => 'filesystem',
 
 	/**
-	 * @name    MEMCACHE
+	 * @name    memcache
 	 * Memcache connexion settings
 	 * @type    {Array}
 	 */
-	'MEMCACHE' => [
+	'memcache' => [
 		/**
-		 * @name    MEMCACHE.HOST
+		 * @name    memcache.host
 		 * Memcache host
 		 * @type    {String}
 		 * @default    localhost
 		 */
-		'HOST' => 'localhost',
+		'host' => 'localhost',
 
 		/**
-		 * @name    MEMCACHE.PORT
+		 * @name    memcache.port
 		 * Memcache port
 		 * @type    {Integer}
 		 * @default    11211
 		 */
-		'PORT' => 11211
+		'port' => 11211
 	],
 
 	/**
-	 * @name    MEMCACHED
+	 * @name    memcached
 	 * Memcached connexion settings
 	 * @type    {Array}
 	 */
-	'MEMCACHED' => [
+	'memcached' => [
 		/**
-		 * @name    MEMCACHED.HOST
+		 * @name    memcached.host
 		 * Memcached host
 		 * @type    {String}
 		 * @default    localhost
 		 */
-		'HOST' => 'localhost',
+		'host' => 'localhost',
 
 		/**
-		 * @name    MEMCACHED.PORT
+		 * @name    memcached.port
 		 * Memcached port
 		 * @type    {Integer}
 		 * @default    11211
 		 */
-		'PORT' => 11211
+		'port' => 11211
 	],
 
 	/**
-	 * @name    REDIS
+	 * @name    redis
 	 * Redis connexion settings
 	 * @type    {Array}
 	 */
-	'REDIS' => [
+	'redis' => [
 		/**
-		 * @name    REDIS.HOST
+		 * @name    redis.host
 		 * Redis host
 		 * @type    {String}
 		 * @default    127.0.0.1
 		 */
-		'HOST' => '127.0.0.1',
+		'host' => '127.0.0.1',
 
 		/**
-		 * @name    REDIS.PORT
+		 * @name    redis.port
 		 * Redis port
 		 * @type    {Integer}
 		 * @default    6379
 		 */
-		'PORT' => 6379
+		'port' => 6379
 	]
 ];

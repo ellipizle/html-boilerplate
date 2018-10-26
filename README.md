@@ -33,22 +33,28 @@ Base HTML files and folder structure with complete build process (js, sass, imag
 
 ## Features
 
-- Complete build process - Javascript files compiling (ES6, etc...) - CSS files compiling (SASS, SCSS) + Autoprefixr - Images compression - Icons font generation from svg files - Auto-build through files monitoring - Nice notifications feedback on build completion - Built in favicons generator
-- Code linting through [StandardJS](https://standardjs.com/) and [Stylelint](https://stylelint.io/)
+- Complete build process
+  - Javascript files compiling (ES6, etc...)
+  - CSS files compiling (SASS, SCSS) + Autoprefixr
+  - Images compression
+  - Auto-build through files monitoring
+  - Nice notifications feedback on build completion
+  - Built in favicons generator
+- CSS structure based on [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) principles
+- Base views provided for header and footer
+- Code linting through [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/)
 - [Jest](https://jestjs.io/) tests stack
 - Automatically reject commits if tests and linting fail through [pre-commit](https://www.npmjs.com/package/pre-commit)
-- [Livereload](https://www.npmjs.com/package/livereload) built in
 - [Browsersync](https://browsersync.io/) built in
-- [PHP7 development server](https://www.npmjs.com/package/gulp-connect-php7) built in
 - Docker container configuration built in
 - Base `.htaccess` file (shamefully taken from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate))
 - Automatic changelog generation through [git-changelog](https://www.npmjs.com/package/git-changelog)
 - [CSSUA](http://cssuseragent.org/) built in
-- [Babel polyfill](https://www.npmjs.com/package/babel-polyfill) built in
-- [Coffeekraken scripts stack](https://github.com/coffeekraken/scripts-stack) integrated
-- [Coffeekraken carpenter](https://github.com/coffeekraken/carpenter) integrated
-- [Coffeekraken sugar](https://github.com/coffeekraken/sugar) integrated
-- [Coffeekraken gridle](https://github.com/coffeekraken/gridle) integrated
+- [Babel polyfill](https://babeljs.io/docs/en/babel-polyfill) built in
+- [Coffeekraken scripts stack](https://github.com/coffeekraken/scripts-stack) built in
+- [Coffeekraken carpenter](https://github.com/coffeekraken/carpenter) built in
+- [Coffeekraken sugar](https://github.com/coffeekraken/sugar) built in
+- [Coffeekraken gridle](https://github.com/coffeekraken/gridle) built in
 - [Dwarvesforge Thorin](https://github.com/Dwarvesforge/thorin) built in
 
 ## Table of content

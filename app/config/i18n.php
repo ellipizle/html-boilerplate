@@ -1,14 +1,14 @@
 <?php
 
 return [
-  /**
+	/**
 	 * @name		AVAILABLE_LANGUAGES
 	 * Specify the available languages in two characters format like "fr, en, etc..."
 	 * Need to be an array of two characters language code
 	 * @type 		{Array}
 	 * @default 	['en']
 	 */
-	'AVAILABLE_LANGUAGES' =>  ['en'],
+	'available_languages' =>  ['en'],
 
 	/**
 	 * @name 		DEFAULT_LANGUAGE
@@ -17,5 +17,5 @@ return [
 	 * @type 		{String}
 	 * @default 	en
 	 */
-	'DEFAULT_LANGUAGE' =>  'en'
+	'default_language' =>  'en'
 ];
