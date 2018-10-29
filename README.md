@@ -1,6 +1,6 @@
-![Coffeekraken HTML Boilerplate](.resources/doc-header.jpg)
+![Coffeekraken HTML Boilerplate](/.resources/doc-header.jpg)
 
-# Coffeekraken HTML Boilerplate <img src=".resources/coffeekraken-logo.jpg" height="25px" />
+# Coffeekraken HTML Boilerplate <img src="/.resources/coffeekraken-logo.jpg" height="25px" />
 
 <p>
 	<!-- <a href="https://travis-ci.org/coffeekraken/html-boilerplate">
@@ -73,7 +73,7 @@ Base HTML files and folder structure with complete build process (js, sass, imag
 
 ## Install
 
-```
+```sh
 npm install
 composer install
 ```
@@ -86,7 +86,7 @@ composer install
 
 Run this command to start working as quickly as possible
 
-```
+```sh
 npm start
 ```
 

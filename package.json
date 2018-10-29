@@ -116,7 +116,7 @@
     "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.0",
     "browser-sync": "^2.26.3",
-    "coffeekraken-carpenter": "^1.0.0",
+    "coffeekraken-carpenter": "^1.2.10",
     "coffeekraken-criticalcss": "^1.0.0",
     "coffeekraken-favicons": "^1.0.0",
     "coffeekraken-imagemin": "^1.0.1",

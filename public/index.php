@@ -10,9 +10,6 @@ error_reporting(E_ALL);
 // bootstrap
 require_once '../app/bootstrap.php';
 
-// composer
-require_once '../vendor/autoload.php';
-
 // slim app
 $configuration = [
   'settings' => [
