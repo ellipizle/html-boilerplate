@@ -31,6 +31,20 @@
 
 Base HTML files and folder structure with complete build process (js, sass, image compression, etc...) built in
 
+<img src="/.resources/babel.png" title="Babel" height="40px" />
+<img src="/.resources/browsersync.png" title="Browsersync" height="40px" />
+<img src="/.resources/composer.png" title="Composer" height="40px" />
+<img src="/.resources/docker.png" title="Docker" height="40px" />
+<img src="/.resources/eslint.png" title="ESLint" height="40px" />
+<img src="/.resources/jest.png" title="Jest" height="40px" />
+<img src="/.resources/npm.png" title="NPM" height="40px" />
+<img src="/.resources/php.png" title="PHP" height="40px" />
+<img src="/.resources/prettier.png" title="Prettier" height="40px" />
+<img src="/.resources/sass.png" title="Sass" height="40px" />
+<img src="/.resources/stylelint.png" title="Stylelint" height="40px" />
+<img src="/.resources/travisci.png" title="Travis CI" height="40px" />
+<img src="/.resources/webpack.png" title="Webpack" height="40px" />
+
 ## Features
 
 - Complete build process
@@ -64,10 +78,11 @@ Base HTML files and folder structure with complete build process (js, sass, imag
 3. [Get Started](#readme-get-started)
 4. [Scripts](#readme-scripts)
 5. [Browsers support](#readme-browsers-support)
-6. [Code linting](#readme-code-linting)
-7. [Contribute](https://github.com/Coffeekraken/coffeekraken/blob/master/contribute.md)
-8. [Who are Coffeekraken?](https://github.com/Coffeekraken/coffeekraken/blob/master/who-are-we.md)
-9. [Licence](#readme-license)
+6. [Code formatting](#readme-code-formatting)
+7. [Code linting](#readme-code-linting)
+8. [Contribute](https://github.com/Coffeekraken/coffeekraken/blob/master/contribute.md)
+9. [Who are Coffeekraken?](https://github.com/Coffeekraken/coffeekraken/blob/master/who-are-we.md)
+10. [Licence](#readme-license)
 
 <a name="readme-install"></a>
 
@@ -130,13 +145,19 @@ npm start
 
 > As browsers are automatically updated, we will keep as reference the last two versions of each but this component can work on older ones as well.
 
+<a id="readme-code-formatting"></a>
+
+## Code formatting
+
+Your code will automatically be formatted using [Prettier](https://prettier.io/) when you commmit your files.
+
 <a id="readme-code-linting"></a>
 
 ## Code linting
 
 This boilerplate uses some code linting rules. Here's the list:
 
-1. [StandardJS](https://standardjs.com/) for javascript files
+1. [ESLint](https://eslint.org/) with [airbnb](https://www.npmjs.com/package/eslint-config-airbnb) and [prettier](https://github.com/prettier/eslint-config-prettier) for javascript files
 2. [Stylelint](https://github.com/stylelint/stylelint) with [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard) for `scss` files
 
 > Your commits will not been accepted if the code style is not respected!
