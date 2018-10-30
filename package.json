@@ -116,12 +116,12 @@
     "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.0",
     "browser-sync": "^2.26.3",
-    "coffeekraken-carpenter": "^1.2.10",
+    "coffeekraken-carpenter": "^1.2.12",
     "coffeekraken-criticalcss": "^1.0.0",
     "coffeekraken-favicons": "^1.0.0",
     "coffeekraken-imagemin": "^1.0.1",
     "coffeekraken-scripts-stack": "^1.0.1",
-    "eslint": "^5.7.0",
+    "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
@@ -136,9 +136,9 @@
     "prettier": "^1.14.3",
     "pretty-quick": "^1.8.0",
     "resize-cli": "^0.0.4",
-    "stylelint": "^9.3.0",
+    "stylelint": "^9.7.0",
     "stylelint-config-standard": "^18.2.0",
-    "webpack": "^4.0.0",
+    "webpack": "^4.23.1",
     "webpack-cli": "^3.0.8"
   }
 }
