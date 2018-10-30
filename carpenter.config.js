@@ -3,7 +3,7 @@ module.exports = {
   port: 3333,
 
   // title
-  title: "{project-name}",
+  title: require("./package.json").name,
 
   // logo
   logo: null,
@@ -16,6 +16,7 @@ module.exports = {
     // files (glob patterns)
     files: [
       "README.md",
+      "vendor/dwarvesforge/thorin/**/*.md",
       "node_modules/coffeekraken-sugar/**/*.md",
       "node_modules/coffeekraken-gridle/**/*.md",
       "node_modules/coffeekraken-s-*/**/*.md"
@@ -31,6 +32,7 @@ module.exports = {
     displays: ["node_modules/coffeekraken-gridle/carpenter.displays.js"]
   },
 
+  // components files
   components: {
     inject: ["public/dist/css/style.css", "public/dist/js/app.js"],
     viewsRootPath: "app/views",
