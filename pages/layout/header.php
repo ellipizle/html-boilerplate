@@ -1,19 +1,19 @@
 <?php
 
 print Thorin::render_blade('layout/header', [
-  'root_url' => Thorin::root_url(),
-  'current_url' => Thorin::current_url(),
-	'lang' => Thorin::language(),
+  'root_url' => Thorin::url_root(),
+  'current_url' => Thorin::url_current(),
+  'lang' => Thorin::i18n_language(),
   'charset' => 'utf-8',
   'viewport' => null,
   'noindex' => Thorin::is_environment('development','testing'),
-	'title' => Thorin::lang('default.metas.title'),
-	'description' => Thorin::lang('default.metas.description'),
-	'keywords' => Thorin::lang('default.metas.keywords'),
-	'sharing_image' => Thorin::asset_url('img/sharing.png', true),
+	'title' => Thorin::i18n('default.metas.title'),
+	'description' => Thorin::i18n('default.metas.description'),
+	'keywords' => Thorin::i18n('default.metas.keywords'),
+	'sharing_image' => Thorin::url_asset('img/sharing.png', true),
 	'body_class' => null,
 	'stylesheets' => [
-		Thorin::asset_url('css/style.css')
+		Thorin::url_asset('css/style.css')
 	],
   'scripts' => [],
   'og' => true,

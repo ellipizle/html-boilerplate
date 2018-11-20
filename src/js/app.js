@@ -1,6 +1,5 @@
 // import some dependencies like polyfills, etc...
 import "@babel/polyfill"
-import "webcomponents.js/webcomponents-lite"
 import "cssuseragent"
 import "fastclick"
 

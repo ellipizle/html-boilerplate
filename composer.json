@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "dwarvesforge/thorin": "1.1.*",
+    "dwarvesforge/thorin": "2.0.*",
     "slim/slim-skeleton": "^3.1"
   }
 }

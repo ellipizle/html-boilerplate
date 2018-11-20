@@ -1,3 +1,6 @@
+<video class="video video--fullscreen" autoplay loop muted>
+  <source src="data/disaster.mp4" type="video/mp4">
+</video>
 <div class="card card--centered">
   <h1 class="h1 m-b">
     {{ $title }}

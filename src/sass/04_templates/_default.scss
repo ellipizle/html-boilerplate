@@ -6,6 +6,7 @@ body {
 body {
   background-color: s-color(secondary);
   -webkit-font-smoothing: auto;
+  overflow: hidden;
 
   // autialiazed on retina displays
   @media screen and (-webkit-min-device-pixel-ratio: 2),
