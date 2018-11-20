@@ -52,14 +52,14 @@ return [
 	'cache_filesystem' => '${path.app}cache/filesystem/',
 
 	/**
-	 * @name 		i18n
+	 * @name 		lang
 	 * Specify where the lang files are stored absolute to the server root folder.
 	 * Need to end with a trailing /
 	 * This is bein used in functions like "lang", etc...
 	 * @type 		{String}
 	 * @default 	${path.app}lang/
 	 */
-	'i18n' => '${path.app}i18n/',
+	'lang' => '${path.app}lang/',
 
 	/**
 	 * @name 		views
