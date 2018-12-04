@@ -21,6 +21,15 @@
 	<a href="https://github.com/coffeekraken/html-boilerplate">
 		<img src="https://img.shields.io/github/stars/coffeekraken/html-boilerplate.svg?style=social&label=Star&style=flat-square" />
 	</a>-->
+  <a href="https://github.com/coffeekraken/html-boilerplate">
+    <img src="https://img.shields.io/david/coffeekraken/html-boilerplate.svg?style=flat-square" />
+  </a>
+  <a href="https://github.com/coffeekraken/html-boilerplate">
+    <img src="https://img.shields.io/david/dev/coffeekraken/html-boilerplate.svg?style=flat-square" />
+  </a>
+  <a href="https://github.com/Coffeekraken/html-boilerplate/blob/master/LICENSE.txt">
+    <img src="https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square" />
+  </a>
 	<a href="https://twitter.com/coffeekrakenio">
 		<img src="https://img.shields.io/twitter/url/http/coffeekrakenio.svg?style=social&style=flat-square" />
 	</a>
