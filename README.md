@@ -131,7 +131,6 @@ npm start
 - `npm run lint` : Run the linters
 - `npm run lint:js` : Run the Js linter
 - `npm run lint:css` : Run the css linter
-- `npm run changelog` : Build the changelog from the git commits ([see here](https://www.npmjs.com/package/git-changelog) for more documentation)
 
 <a name="readme-browsers-support"></a>
 ## Browsers support
