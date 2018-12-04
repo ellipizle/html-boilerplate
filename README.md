@@ -60,7 +60,6 @@ Base HTML files and folder structure with complete build process (js, sass, imag
 - [Browsersync](https://browsersync.io/) built in
 - Docker container configuration built in
 - Base `.htaccess` file (shamefully taken from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate))
-- Automatic changelog generation through [git-changelog](https://www.npmjs.com/package/git-changelog)
 - [CSSUA](http://cssuseragent.org/) built in
 - [Babel polyfill](https://babeljs.io/docs/en/babel-polyfill) built in
 - [Coffeekraken scripts stack](https://github.com/coffeekraken/scripts-stack) built in

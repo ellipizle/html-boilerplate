@@ -49,8 +49,7 @@
     "test": "jest",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint 'src/**/*.js'",
-    "lint:css": "stylelint 'src/sass/**/*.scss'",
-    "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
+    "lint:css": "stylelint 'src/sass/**/*.scss'"
   },
   "pre-commit": [
     "pretty-quick-commit",
