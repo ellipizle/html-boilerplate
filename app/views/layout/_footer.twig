@@ -1,0 +1,46 @@
+	{% if js_variables %}
+		<script>
+      {% for key, value in js_variables %}
+				window.{{ key }} = {{ value | json_encode }};
+			{% endfor %}
+		</script>
+	{% endif %}
+
+	{% if stylesheets %}
+		<!-- Stylesheets -->
+		{% for stylesheet in stylesheets %}
+			{% if stylesheet %}
+				<link rel="stylesheet" href="{{ stylesheet }}" type="text/css">
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+	{% if scripts %}
+		<!-- Scripts -->
+		{% for script in scripts %}
+			{% if script %}
+				<script src="{{ script }}"></script>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+	{% if webfonts %}
+		<!-- Webfonts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google: {
+					families: [
+						{% for webfont in webfonts %}
+							'{{ webfont }}',
+						{% endfor %}
+					]
+				}
+			});
+		</script>
+	{% endif %}
+
+	{{ html | raw }}
+
+	</body>
+</html>

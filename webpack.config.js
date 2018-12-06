@@ -1,11 +1,15 @@
 const path = require("path")
 const webpack = require("webpack")
+const glob = require("glob-all")
 
 module.exports = {
   watch: true,
   mode: "development",
   entry: {
-    "public/dist/js/app.js": "./src/js/app.js",
+    "public/dist/js/app.js": [
+      "./src/js/app.js",
+      ...glob.sync("./app/views/**/*.js")
+    ],
     "public/dist/js/template-stack.js": "./src/js/template-stack.js"
   },
   output: {
