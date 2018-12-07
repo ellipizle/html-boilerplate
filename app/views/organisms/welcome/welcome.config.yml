@@ -2,3 +2,5 @@ context:
   title: Suspendisse auctor justo in accumsan felis leo nibh lorem sed
   description: Tristique tortor bibendum nascetur tincidunt aptent nisl nec facilisis commodo pellentesque felis volutpat ridiculus viverra quam mollis euismod a sagittis
   image: /data/doc-header.jpg
+  button:
+    label: Hello World

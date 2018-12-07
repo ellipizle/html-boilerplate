@@ -9,7 +9,16 @@
   },
   "watch": {
     "dist:css": {
-      "paths": "src/sass/**/*.{scss,sass,css}"
+      "paths": [
+        "src/sass/**/*.{scss,sass,css}",
+        "app/views/**/*.{scss,sass,css}"
+      ]
+    },
+    "dist:js": {
+      "paths": [
+        "src/js/**/*.js",
+        "app/views/**/*.js"
+      ]
     },
     "dist:img": {
       "paths": "src/img/**/*.{jpg,jpeg,png,gif,bmp,svg}"
@@ -20,12 +29,15 @@
     "dist:icons": {
       "paths": "src/icons/**/*.{svg,svgz}"
     },
+    "dist:views": {
+      "paths": "app/views/**/*.twig"
+    },
     "data": {
       "paths": "data-src/**/*"
     }
   },
   "scripts": {
-    "dist": "npm run dist:fonts && npm run dist:css && npm run dist:js && npm run dist:img && npm run dist:icons && npm run dist:favicons",
+    "dist": "npm run dist:fonts && npm run dist:css && npm run dist:js && npm run dist:img && npm run dist:icons && npm run dist:favicons && npm run dist:views",
     "dist:js": "webpack",
     "dist:css": "node-sass src/sass/style.scss public/dist/css/style.css --importer node_modules/node-sass-glob-importer/dist/cli.js --include-path node_modules --output-style expanded && npm run dist:css:autoprefixr",
     "dist:css:autoprefixr": "postcss public/dist/css/style.css --use autoprefixer -d public/dist/css --no-map",
@@ -34,7 +46,8 @@
     "dist:icons": "rm -rf public/dist/icons && cp -R src/icons public/dist/icons",
     "dist:favicons": "coffeekraken-favicons --source src/img/favicon.png --output public/dist/favicons --html-output public/dist/favicons/favicons.html --path '/dist/favicons' --theme '#fff' --background '#fff'",
     "dist:criticalcss": "coffeekraken-criticalcss -o public/dist/css/critical.css -c public/dist/css/style.css -h http://localhost:8080",
-    "dist:prod": "npm run dist:fonts && npm run dist:prod:css && npm run dist:prod:js && npm run dist:img && npm run dist:icons && npm run dist:favicons",
+    "dist:views": "fractal export",
+    "dist:prod": "npm run dist:fonts && npm run dist:prod:css && npm run dist:prod:js && npm run dist:img && npm run dist:icons && npm run dist:favicons && npm run dist:views",
     "dist:prod:js": "webpack --config webpack.prod.config.js",
     "dist:prod:css": "node-sass src/sass/style.scss public/dist/css/style.css --importer node_modules/node-sass-glob-importer/dist/cli.js --include-path node_modules --output-style compressed && npm run dist:css:autoprefixr",
     "data": "rm -rf public/data && cp -R data-src public/data && npm run data:img && npm run data:img:placeholder",
@@ -87,7 +100,6 @@
     "coffeekraken-template-stack": "git+https://git@github.com/Coffeekraken/template-stack.git#master",
     "cssuseragent": "^2.1.31",
     "fastclick": "^1.0.6",
-    "index.js": "^2.1.31",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
@@ -112,7 +124,7 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
     "@frctl/fractal": "^1.1.7",
-    "@frctl/twig": "^1.0.0-beta.4",
+    "@frctl/twig": "^1.0.0-beta.5",
     "autoprefixer": "^9.1.5",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.4.2",
@@ -122,15 +134,18 @@
     "coffeekraken-favicons": "^1.0.0",
     "coffeekraken-imagemin": "^1.0.2",
     "coffeekraken-scripts-stack": "^1.0.3",
+    "copyfiles": "^2.1.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "faker": "^4.1.0",
     "favicons": "^5.2.0",
     "glob-all": "^3.1.0",
     "jest": "^23.6.0",
+    "mkdir-recursive": "^0.4.0",
     "node-sass": "^4.10.0",
     "node-sass-glob-importer": "^5.2.0",
     "postcss-cli": "^6.0.0",

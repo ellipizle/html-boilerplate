@@ -69,7 +69,7 @@ return [
 	 * @type 		{String}
 	 * @default 	${path.app}views/
 	 */
-	'views' => '${path.app}views/',
+	'views' => '${path.document_root}dist/views/',
 
 	/**
 	 * @name 		cache_path

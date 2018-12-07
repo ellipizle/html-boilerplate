@@ -3,7 +3,6 @@ const webpack = require("webpack")
 const glob = require("glob-all")
 
 module.exports = {
-  watch: true,
   mode: "development",
   entry: {
     "public/dist/js/app.js": [

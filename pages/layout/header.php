@@ -1,6 +1,6 @@
 <?php
 
-print Thorin::render_twig('layout/header', [
+print Thorin::render_twig('layout/_header', [
   'root_url' => Thorin::root_url(),
   'current_url' => Thorin::current_url(),
   'lang' => Thorin::language(),
