@@ -1,6 +1,6 @@
 <?php
 
-print Thorin::render_twig('layout/_header', [
+return [
   'root_url' => Thorin::root_url(),
   'current_url' => Thorin::current_url(),
   'lang' => Thorin::language(),
@@ -22,4 +22,4 @@ print Thorin::render_twig('layout/_header', [
   'google_tag_manager_id' => null,
   'google_analytics_id' => null,
 	'html' => null
-]);
+];

@@ -46,7 +46,7 @@
     "dist:icons": "rm -rf public/dist/icons && cp -R src/icons public/dist/icons",
     "dist:favicons": "coffeekraken-favicons --source src/img/favicon.png --output public/dist/favicons --html-output public/dist/favicons/favicons.html --path '/dist/favicons' --theme '#fff' --background '#fff'",
     "dist:criticalcss": "coffeekraken-criticalcss -o public/dist/css/critical.css -c public/dist/css/style.css -h http://localhost:8080",
-    "dist:views": "fractal export",
+    "dist:views": "fractal export -o public/dist/views",
     "dist:prod": "npm run dist:fonts && npm run dist:prod:css && npm run dist:prod:js && npm run dist:img && npm run dist:icons && npm run dist:favicons && npm run dist:views",
     "dist:prod:js": "webpack --config webpack.prod.config.js",
     "dist:prod:css": "node-sass src/sass/style.scss public/dist/css/style.css --importer node_modules/node-sass-glob-importer/dist/cli.js --include-path node_modules --output-style compressed && npm run dist:css:autoprefixr",

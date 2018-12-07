@@ -67,7 +67,7 @@ return [
 	 * Need to end with a trailing /
 	 * This is bein used in functions like "render_blade", "render", etc...
 	 * @type 		{String}
-	 * @default 	${path.app}views/
+	 * @default 	${path.document_root}dist/views/
 	 */
 	'views' => '${path.document_root}dist/views/',
 

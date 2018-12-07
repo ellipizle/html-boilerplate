@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "e80efc971b676bd23977974bd42f858b",
@@ -167,16 +167,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.81.1",
+            "version": "3.81.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "02a3ea09dd846c2d3bb923d6c91902f08c5bf2af"
+                "reference": "1dd023879874ce22a7f8e2b2e014166cd1160b0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/02a3ea09dd846c2d3bb923d6c91902f08c5bf2af",
-                "reference": "02a3ea09dd846c2d3bb923d6c91902f08c5bf2af",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1dd023879874ce22a7f8e2b2e014166cd1160b0d",
+                "reference": "1dd023879874ce22a7f8e2b2e014166cd1160b0d",
                 "shasum": ""
             },
             "require": {
@@ -246,7 +246,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2018-12-06T20:10:37+00:00"
+            "time": "2018-12-07T19:55:05+00:00"
         },
         {
             "name": "cache/adapter-common",
@@ -928,23 +928,25 @@
         },
         {
             "name": "d11wtq/boris",
-            "version": "v1.0.10",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/borisrepl/boris.git",
-                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483"
+                "reference": "125dd4e5752639af7678a22ea597115646d89c6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/borisrepl/boris/zipball/31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
-                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
+                "url": "https://api.github.com/repos/borisrepl/boris/zipball/125dd4e5752639af7678a22ea597115646d89c6e",
+                "reference": "125dd4e5752639af7678a22ea597115646d89c6e",
                 "shasum": ""
             },
             "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
                 "ext-pcntl": "*",
                 "ext-posix": "*",
-                "ext-readline": "*",
-                "php": ">=5.3.0"
+                "ext-readline": "*"
             },
             "bin": [
                 "bin/boris"
@@ -956,11 +958,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A tiny, but robust REPL (Read-Evaluate-Print-Loop) for PHP.",
-            "time": "2015-03-01T08:05:19+00:00"
+            "time": "2014-01-17T12:21:18+00:00"
         },
         {
             "name": "dflydev/fig-cookies",
@@ -2146,22 +2144,20 @@
         },
         {
             "name": "jeremykendall/php-domain-parser",
-            "version": "1.4.6",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeremykendall/php-domain-parser.git",
-                "reference": "66379578432e85f764f4f9d587d61e48d66c2082"
+                "reference": "add2b07755ab1d2543a383bd78fbe031c6377f9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeremykendall/php-domain-parser/zipball/66379578432e85f764f4f9d587d61e48d66c2082",
-                "reference": "66379578432e85f764f4f9d587d61e48d66c2082",
+                "url": "https://api.github.com/repos/jeremykendall/php-domain-parser/zipball/add2b07755ab1d2543a383bd78fbe031c6377f9a",
+                "reference": "add2b07755ab1d2543a383bd78fbe031c6377f9a",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "ext-intl": "*",
-                "ext-mbstring": "*",
                 "php": ">=5.3.0"
             },
             "require-dev": {
@@ -2198,7 +2194,7 @@
                 "domain parsing",
                 "url parsing"
             ],
-            "time": "2014-07-28T18:36:24+00:00"
+            "time": "2014-07-21T15:23:19+00:00"
         },
         {
             "name": "jwage/purl",
@@ -2308,34 +2304,28 @@
         },
         {
             "name": "lcobucci/clock",
-            "version": "1.2.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/clock.git",
-                "reference": "13fda71158032b805cb9c8c7544e6c99019dc267"
+                "reference": "d11d20b6a3df872d34f3b18d5bf4cbe5a01a2451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/clock/zipball/13fda71158032b805cb9c8c7544e6c99019dc267",
-                "reference": "13fda71158032b805cb9c8c7544e6c99019dc267",
+                "url": "https://api.github.com/repos/lcobucci/clock/zipball/d11d20b6a3df872d34f3b18d5bf4cbe5a01a2451",
+                "reference": "d11d20b6a3df872d34f3b18d5bf4cbe5a01a2451",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2"
+                "php": "^7.1"
             },
             "require-dev": {
-                "infection/infection": "^0.10",
-                "lcobucci/coding-standard": "^1.0",
-                "phpstan/phpstan": "^0.10",
-                "phpstan/phpstan-deprecation-rules": "^0.10",
-                "phpstan/phpstan-phpunit": "^0.10",
-                "phpstan/phpstan-strict-rules": "^0.10",
-                "phpunit/phpunit": "^7.3"
+                "phpunit/phpunit": "^6.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -2354,7 +2344,7 @@
                 }
             ],
             "description": "Yet another clock abstraction",
-            "time": "2018-08-12T16:47:48+00:00"
+            "time": "2018-01-19T15:38:44+00:00"
         },
         {
             "name": "lcobucci/jwt",

@@ -71,37 +71,65 @@ fractal.web.theme(myCustomisedTheme)
  * Export views command exposed through the fractal CLI
  */
 function exportViews(args, done) {
-  // remove files
-  rimraf.sync("public/dist/views")
+  // remove files before regenerate them
+  rimraf.sync(args.options.output)
 
   const app = this.fractal
   const items = app.components.flattenDeep().toArray()
   const jobs = []
   const path = require("path")
-  const collection = fractal.components
+  const collection = app.components
 
   for (const item of items) {
-    const exportPath = path.join("./public/dist/views", `${item.relViewPath}`)
+    const exportPath = path.join(
+      "./",
+      args.options.output,
+      `${item.relViewPath}`
+    )
     const job = item
       .getContent()
       .then(str => {
         return str.replace(/\@([0-9a-zA-Z\-\_]*)/g, function(match, handle) {
           const component = collection.find(match)
-          console.log(component.relViewPath)
           return `${component.relViewPath}`
         })
       })
       .then(str => {
-        console.log(exportPath)
+        return new Promise((resolve, reject) => {
+          // remove the faker helper that is available only in the js environment
+          str = str.replace(/\{%\s?render/gm, function() {
+            return "{% include"
+          })
+          resolve(str)
+        })
+      })
+      .then(str => {
+        return new Promise((resolve, reject) => {
+          // remove the faker helper that is available only in the js environment
+          str = str.replace(
+            /\|\s?faker\('[a-zA-Z0-9.,()]+'\)\s?/gm,
+            function() {
+              return ""
+            }
+          )
+          resolve(str)
+        })
+      })
+      .then(str => {
         fs.mkdirSync(path.dirname(exportPath), { recursive: true })
         return fs.writeFileSync(exportPath, str)
       })
 
     jobs.push(job)
   }
-
   return Promise.all(jobs)
 }
 fractal.cli.command("export", exportViews, {
-  description: "Export all component templates"
+  description: "Export all component templates",
+  options: [
+    [
+      "-o, --output <output-dir>",
+      "The directory to export components into, relative to the CWD."
+    ]
+  ]
 })
