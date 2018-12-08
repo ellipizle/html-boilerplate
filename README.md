@@ -40,7 +40,7 @@
 
 Base HTML files and folder structure with complete build process (js, sass, image compression, etc...) built in
 
-<img src="/.resources/babel.png" title="Babel" height="40px" /><img src="/.resources/browsersync.png" title="Browsersync" height="40px" /><img src="/.resources/composer.png" title="Composer" height="40px" /><img src="/.resources/docker.png" title="Docker" height="40px" /><img src="/.resources/eslint.png" title="ESLint" height="40px" /><img src="/.resources/jest.png" title="Jest" height="40px" /><img src="/.resources/npm.png" title="NPM" height="40px" />
+<img src="/.resources/babel.png" title="Babel" height="40px" /><img src="/.resources/fractal.png" title="Fractal" height="40px" /><img src="/.resources/browsersync.png" title="Browsersync" height="40px" /><img src="/.resources/composer.png" title="Composer" height="40px" /><img src="/.resources/docker.png" title="Docker" height="40px" /><img src="/.resources/eslint.png" title="ESLint" height="40px" /><img src="/.resources/jest.png" title="Jest" height="40px" /><img src="/.resources/npm.png" title="NPM" height="40px" />
 <img src="/.resources/php.png" title="PHP" height="40px" /><img src="/.resources/prettier.png" title="Prettier" height="40px" /><img src="/.resources/sass.png" title="Sass" height="40px" /><img src="/.resources/stylelint.png" title="Stylelint" height="40px" /><img src="/.resources/travisci.png" title="Travis CI" height="40px" /><img src="/.resources/webpack.png" title="Webpack" height="40px" />
 
 ## Features
@@ -115,13 +115,14 @@ npm start
 - `npm run dist:icons` : Build the icons font
 - `npm run dist:favicons` : Generate all the favicons from a single image file with all the files like `manifest.json`, etc... for mobile phones
 - `npm run dist:criticalcss` : Generate the `dist/css/critical.css` file from depending on the `pages.json` defined pages
+- `npm run dist:views` : Process the views from `app/views` and save them into `public/dist/views`
 - `npm run dist:prod` : Build the production version of the distribution
 - `npm run dist:prod:js`: Build the production version of the js distribution
 - `npm run dist:prod:css`: Build the production version of the css distribution¨
 - `npm run data` : Process the files located in the `data-src` folder to the `data` folder
 - `npm run data:img` : Minify the images of the `data-src` folder to the `data` folder
 - `npm run data:img:placeholder` : Create a `.placeholder.{ext}` file by image that represent a mini version of the original one
-- `npm run carpenter` : Start the carpenter interface
+- `npm run fractal` : Start the fractal interface
 - `npm run browsersync` : Start the browsersync service on port `8080`
 - `npm start` : Build/monitor src files using coffeekraken-scripts-stack, start the http server as well as the livereload one
 - `npm run server` : Start the http (PHP) server accessible on port `8181`
