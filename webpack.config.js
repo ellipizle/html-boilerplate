@@ -1,19 +1,19 @@
-const path = require("path")
-const webpack = require("webpack")
-const glob = require("glob-all")
+const path = require('path')
+const webpack = require('webpack')
+const glob = require('glob-all')
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry: {
-    "public/dist/js/app.js": [
-      "./src/js/app.js",
-      ...glob.sync("./app/views/**/*.js")
+    'public/dist/js/app.js': [
+      './src/js/app.js',
+      ...glob.sync('./app/views/**/*.js')
     ],
-    "public/dist/js/template-stack.js": "./src/js/template-stack.js"
+    'public/dist/js/template-stack.js': './src/js/template-stack.js'
   },
   output: {
     path: path.resolve(__dirname),
-    filename: "[name]"
+    filename: '[name]'
   },
   module: {
     rules: [
@@ -22,7 +22,7 @@ module.exports = {
         exclude: /(bower_components|node_modules)/,
         use: [
           {
-            loader: "babel-loader"
+            loader: 'babel-loader'
           }
         ]
       }

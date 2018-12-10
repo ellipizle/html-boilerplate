@@ -1,9 +1,9 @@
-import SWebComponent from "coffeekraken-sugar/js/core/SWebComponent"
+import SWebComponent from 'coffeekraken-sugar/js/core/SWebComponent'
 
 // icons
 SWebComponent.setDefaultProps(
   {
-    driver: "fontawesome"
+    driver: 'fontawesome'
   },
-  "s-icon"
+  's-icon'
 )

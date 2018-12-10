@@ -1,54 +1,54 @@
-"use strict"
+'use strict'
 
 /**
  * Load the package.json
  */
-const packageJson = require("./package.json")
+const packageJson = require('./package.json')
 
 /*
  * Require some modules
  */
-const path = require("path")
-const fs = require("fs")
-const rimraf = require("rimraf")
-const copyFiles = require("copyfiles")
-const glob = require("glob-all")
-const faker = require("faker")
+const path = require('path')
+const fs = require('fs')
+const rimraf = require('rimraf')
+const copyFiles = require('copyfiles')
+const glob = require('glob-all')
+const faker = require('faker')
 
 /*
  * Require the Fractal module
  */
-const fractal = (module.exports = require("@frctl/fractal").create())
+const fractal = (module.exports = require('@frctl/fractal').create())
 
 /*
  * Give your project a title.
  */
-fractal.set("project.title", packageJson.name)
+fractal.set('project.title', packageJson.name)
 
 /*
  * Tell Fractal where to look for components.
  */
-fractal.components.set("path", path.join(__dirname, "app/views"))
+fractal.components.set('path', path.join(__dirname, 'app/views'))
 
 /*
  * Tell Fractal where to look for documentation pages.
  */
-fractal.docs.set("path", path.join(__dirname, "docs"))
+fractal.docs.set('path', path.join(__dirname, 'docs'))
 
 /*
  * Tell the Fractal web preview plugin where to look for static assets.
  */
-fractal.web.set("static.path", path.join(__dirname, "public"))
+fractal.web.set('static.path', path.join(__dirname, 'public'))
 
 /**
  * Set default preview
  */
-fractal.components.set("default.preview", "@preview")
+fractal.components.set('default.preview', '@preview')
 
 /*
  * Require the Twig adapter
  */
-const twigAdapter = require("@frctl/twig")({
+const twigAdapter = require('@frctl/twig')({
   filters: {
     faker: function(value, arg) {
       return value || faker.fake(`{{${arg[0]}}}`)
@@ -56,14 +56,14 @@ const twigAdapter = require("@frctl/twig")({
   }
 })
 fractal.components.engine(twigAdapter)
-fractal.components.set("ext", ".twig")
+fractal.components.set('ext', '.twig')
 
 /**
  * Theme
  */
-const mandelbrot = require("@frctl/mandelbrot")
+const mandelbrot = require('@frctl/mandelbrot')
 const myCustomisedTheme = mandelbrot({
-  skin: "yellow"
+  skin: 'yellow'
 })
 fractal.web.theme(myCustomisedTheme)
 
@@ -77,12 +77,12 @@ function exportViews(args, done) {
   const app = this.fractal
   const items = app.components.flattenDeep().toArray()
   const jobs = []
-  const path = require("path")
+  const path = require('path')
   const collection = app.components
 
   for (const item of items) {
     const exportPath = path.join(
-      "./",
+      './',
       args.options.output,
       `${item.relViewPath}`
     )
@@ -98,7 +98,7 @@ function exportViews(args, done) {
         return new Promise((resolve, reject) => {
           // remove the faker helper that is available only in the js environment
           str = str.replace(/\{%\s?render/gm, function() {
-            return "{% include"
+            return '{% include'
           })
           resolve(str)
         })
@@ -109,7 +109,7 @@ function exportViews(args, done) {
           str = str.replace(
             /\|\s?faker\('[a-zA-Z0-9.,()]+'\)\s?/gm,
             function() {
-              return ""
+              return ''
             }
           )
           resolve(str)
@@ -124,12 +124,12 @@ function exportViews(args, done) {
   }
   return Promise.all(jobs)
 }
-fractal.cli.command("export", exportViews, {
-  description: "Export all component templates",
+fractal.cli.command('export', exportViews, {
+  description: 'Export all component templates',
   options: [
     [
-      "-o, --output <output-dir>",
-      "The directory to export components into, relative to the CWD."
+      '-o, --output <output-dir>',
+      'The directory to export components into, relative to the CWD.'
     ]
   ]
 })

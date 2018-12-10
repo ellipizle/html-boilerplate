@@ -128,7 +128,8 @@ npm start
 - `npm start` : Build/monitor src files using coffeekraken-scripts-stack, start the http server as well as the livereload one
 - `npm run server` : Start the http (PHP) server accessible on port `8181`
 - `npm run pretty-quick` : Run prettier on the entire project
-- `npm run pretty-quick-commit` : Run prettier on staged filed
+- `npm run pretty-quick-commit` : Run prettier on staged files
+- `npm run prettier` : Run prettier on the source files
 - `npm run test` : Run the tests
 - `npm run lint` : Run the linters
 - `npm run lint:js` : Run the Js linter
