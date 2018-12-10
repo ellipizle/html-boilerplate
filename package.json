@@ -55,7 +55,7 @@
     "data:img:placeholder": "resize ./data-src/* -w 100 -o ./public/data/ -s \".placeholder\"",
     "fractal": "fractal start --sync",
     "browsersync": "browser-sync start --proxy \"localhost:8181\" --port 8080 --files='public/dist/css/*.css,public/dist/js/*.js' --no-open",
-    "start": "coffeekraken-scripts-stack dist:js server fractal browsersync -i start -i dist",
+    "start": "coffeekraken-scripts-stack server fractal browsersync -i start -i dist",
     "server": "php -S 0.0.0.0:8181 -t public/",
     "pretty-quick": "pretty-quick",
     "pretty-quick-commit": "pretty-quick --staged > /dev/null 2>&1",
