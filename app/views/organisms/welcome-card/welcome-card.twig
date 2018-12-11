@@ -1,17 +1,15 @@
-{% set content %}
-  <h1 class="h1 m-b">
-    {{ title | faker('lorem.words(3)') }}
-  </h1>
-  <p class="p p--lead m-b">
-    <s-icon icon="address-book"></s-icon>
-    {{ description | faker('lorem.sentence(20)') }}
-  </p>
-  {% include '@button--outline' with {
-    classes: 'm-b'
-  }|merge(button | default({})) %}
-  <img src="{{ image }}" />
-{% endset %}
-
-{% render '@card' with {
-  content: content
-} %}
+{% embed '@card' %}
+  {% block card_content %}
+    <h1 class="h1 m-b">
+      {{ title | faker('lorem.words(3)') }}
+    </h1>
+    <p class="p p--lead m-b">
+      <s-icon icon="address-book"></s-icon>
+      {{ description | faker('lorem.sentence(20)') }}
+    </p>
+    {% include '@button--outline' with {
+      classes: 'm-b'
+    }|merge(button | default({})) %}
+    <img src="{{ image }}" />
+  {% endblock %}
+{% endembed %}
