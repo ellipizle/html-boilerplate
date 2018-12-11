@@ -38,9 +38,9 @@
 	</a>
 </p>
 
-Base HTML files and folder structure with complete build process (js, sass, image compression, etc...) built in
+Base HTML files and folder structure with complete build process (js, sass, image compression, etc...) built-in
 
-<img src="/.resources/babel.png" title="Babel" height="40px" /><img src="/.resources/browsersync.png" title="Browsersync" height="40px" /><img src="/.resources/composer.png" title="Composer" height="40px" /><img src="/.resources/docker.png" title="Docker" height="40px" /><img src="/.resources/eslint.png" title="ESLint" height="40px" /><img src="/.resources/jest.png" title="Jest" height="40px" /><img src="/.resources/npm.png" title="NPM" height="40px" />
+<img src="/.resources/babel.png" title="Babel" height="40px" /><img src="/.resources/fractal.png" title="Fractal" height="40px" /><img src="/.resources/browsersync.png" title="Browsersync" height="40px" /><img src="/.resources/composer.png" title="Composer" height="40px" /><img src="/.resources/twig.png" title="Twig" height="40px" /><img src="/.resources/docker.png" title="Docker" height="40px" /><img src="/.resources/eslint.png" title="ESLint" height="40px" /><img src="/.resources/jest.png" title="Jest" height="40px" /><img src="/.resources/npm.png" title="NPM" height="40px" />
 <img src="/.resources/php.png" title="PHP" height="40px" /><img src="/.resources/prettier.png" title="Prettier" height="40px" /><img src="/.resources/sass.png" title="Sass" height="40px" /><img src="/.resources/stylelint.png" title="Stylelint" height="40px" /><img src="/.resources/travisci.png" title="Travis CI" height="40px" /><img src="/.resources/webpack.png" title="Webpack" height="40px" />
 
 ## Features
@@ -51,22 +51,23 @@ Base HTML files and folder structure with complete build process (js, sass, imag
   - Images compression
   - Auto-build through files monitoring
   - Nice notifications feedback on build completion
-  - Built in favicons generator
+  - Built-in favicons generator
 - CSS structure based on [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) principles
 - Base views provided for header and footer
 - Code linting through [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/)
 - [Jest](https://jestjs.io/) tests stack
 - Automatically reject commits if tests and linting fail through [pre-commit](https://www.npmjs.com/package/pre-commit)
-- [Browsersync](https://browsersync.io/) built in
-- Docker container configuration built in
+- [Fractal](https://fractal.build/) built-in
+- [Twig](https://twig.symfony.com/) support built-in
+- [Browsersync](https://browsersync.io/) built-in
+- [Docker](https://www.docker.com/) container configuration built-in
 - Base `.htaccess` file (shamefully taken from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate))
-- [CSSUA](http://cssuseragent.org/) built in
-- [Babel polyfill](https://babeljs.io/docs/en/babel-polyfill) built in
-- [Coffeekraken scripts stack](https://github.com/coffeekraken/scripts-stack) built in
-- [Coffeekraken carpenter](https://github.com/coffeekraken/carpenter) built in
-- [Coffeekraken sugar](https://github.com/coffeekraken/sugar) built in
-- [Coffeekraken gridle](https://github.com/coffeekraken/gridle) built in
-- [Dwarvesforge Thorin](https://github.com/Dwarvesforge/thorin) built in
+- [CSSUA](http://cssuseragent.org/) built-in
+- [Babel polyfill](https://babeljs.io/docs/en/babel-polyfill) built-in
+- [Coffeekraken scripts stack](https://github.com/coffeekraken/scripts-stack) built-in
+- [Coffeekraken sugar](https://github.com/coffeekraken/sugar) built-in
+- [Coffeekraken gridle](https://github.com/coffeekraken/gridle) built-in
+- [Dwarvesforge Thorin](https://github.com/Dwarvesforge/thorin) built-in
 
 ## Table of content
 
@@ -115,18 +116,20 @@ npm start
 - `npm run dist:icons` : Build the icons font
 - `npm run dist:favicons` : Generate all the favicons from a single image file with all the files like `manifest.json`, etc... for mobile phones
 - `npm run dist:criticalcss` : Generate the `dist/css/critical.css` file from depending on the `pages.json` defined pages
+- `npm run dist:views` : Process the views from `app/views` and save them into `public/dist/views`
 - `npm run dist:prod` : Build the production version of the distribution
 - `npm run dist:prod:js`: Build the production version of the js distribution
 - `npm run dist:prod:css`: Build the production version of the css distribution¨
 - `npm run data` : Process the files located in the `data-src` folder to the `data` folder
 - `npm run data:img` : Minify the images of the `data-src` folder to the `data` folder
 - `npm run data:img:placeholder` : Create a `.placeholder.{ext}` file by image that represent a mini version of the original one
-- `npm run carpenter` : Start the carpenter interface
+- `npm run fractal` : Start the fractal interface
 - `npm run browsersync` : Start the browsersync service on port `8080`
 - `npm start` : Build/monitor src files using coffeekraken-scripts-stack, start the http server as well as the livereload one
 - `npm run server` : Start the http (PHP) server accessible on port `8181`
 - `npm run pretty-quick` : Run prettier on the entire project
-- `npm run pretty-quick-commit` : Run prettier on staged filed
+- `npm run pretty-quick-commit` : Run prettier on staged files
+- `npm run prettier` : Run prettier on the source files
 - `npm run test` : Run the tests
 - `npm run lint` : Run the linters
 - `npm run lint:js` : Run the Js linter

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ lang | default('en') }}">
+
+{% block head %}
+{% include '@head' with head | default({}) %}
+{% endblock %}
+
+<body class="{{ body_class }}">
+
+{% block body %}{% endblock %}
+
+{% block foot %}
+{% include '@foot' with foot | default({}) %}
+{% endblock %}
+
+</body>
+</html>

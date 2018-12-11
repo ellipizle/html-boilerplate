@@ -1,0 +1,14 @@
+<video class="video video--fullscreen" autoplay loop muted>
+  <source src="/data/disaster.mp4" type="video/mp4">
+</video>
+
+{% set content %}
+<div class="not-found">
+  <h1 class="h1 m-b">{{ title | faker('lorem.words(3)') }}</h1>
+  <p class="p p--lead">{{ description | faker('lorem.sentence(20)') }}</p>
+</div>
+{% endset %}
+
+{% render '@card' with {
+  content: content
+} %}
