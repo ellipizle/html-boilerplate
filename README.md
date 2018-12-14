@@ -40,8 +40,12 @@
 
 Base HTML files and folder structure with complete build process (js, sass, image compression, etc...) built-in
 
+---
+
 <img src="/.resources/babel.png" title="Babel" height="40px" /><img src="/.resources/fractal.png" title="Fractal" height="40px" /><img src="/.resources/browsersync.png" title="Browsersync" height="40px" /><img src="/.resources/composer.png" title="Composer" height="40px" /><img src="/.resources/twig.png" title="Twig" height="40px" /><img src="/.resources/docker.png" title="Docker" height="40px" /><img src="/.resources/eslint.png" title="ESLint" height="40px" /><img src="/.resources/jest.png" title="Jest" height="40px" /><img src="/.resources/npm.png" title="NPM" height="40px" />
 <img src="/.resources/php.png" title="PHP" height="40px" /><img src="/.resources/prettier.png" title="Prettier" height="40px" /><img src="/.resources/sass.png" title="Sass" height="40px" /><img src="/.resources/stylelint.png" title="Stylelint" height="40px" /><img src="/.resources/travisci.png" title="Travis CI" height="40px" /><img src="/.resources/webpack.png" title="Webpack" height="40px" />
+
+---
 
 ## Features
 
