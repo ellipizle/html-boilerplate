@@ -2,13 +2,13 @@
   <source src="/data/disaster.mp4" type="video/mp4">
 </video>
 
-{% set content %}
-<div class="not-found">
-  <h1 class="h1 m-b">{{ title | faker('lorem.words(3)') }}</h1>
-  <p class="p p--lead">{{ description | faker('lorem.sentence(20)') }}</p>
-</div>
-{% endset %}
+{% embed '@card' %}
 
-{% render '@card' with {
-  content: content
-} %}
+  {% block card_content %}
+    <div class="not-found">
+      <h1 class="h1 m-b">{{ title | faker('lorem.words(3)') }}</h1>
+      <p class="p p--lead">{{ description | faker('lorem.sentence(20)') }}</p>
+    </div>
+  {% endblock %}
+
+{% endembed %}
