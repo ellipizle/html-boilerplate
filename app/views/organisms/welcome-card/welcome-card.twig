@@ -1,4 +1,6 @@
-{% embed '@card' %}
+{% embed '@card' with {
+  card_classes: 'card--welcome'
+} %}
   {% block card_content %}
     <h1 class="h1 m-b">
       {{ title | faker('lorem.words(3)') }}

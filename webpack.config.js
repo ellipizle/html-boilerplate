@@ -5,15 +5,17 @@ const glob = require('glob-all')
 module.exports = {
   mode: 'development',
   entry: {
-    'public/dist/js/app.js': [
+    app: [
       './src/js/app.js',
-      ...glob.sync('./app/views/**/*.js')
+      ...glob.sync(['./app/views/**/*.js', '!./app/views/**/_*.js'])
     ],
-    'public/dist/js/template-stack.js': './src/js/template-stack.js'
+    'template-stack': './src/js/template-stack.js'
   },
   output: {
-    path: path.resolve(__dirname),
-    filename: '[name]'
+    path: path.resolve(__dirname, 'public/dist/js'),
+    chunkFilename: '[name].[hash].js',
+    filename: '[name].js',
+    publicPath: 'dist/js/'
   },
   module: {
     rules: [

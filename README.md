@@ -56,6 +56,7 @@ Base HTML files and folder structure with complete build process (js, sass, imag
   - Auto-build through files monitoring
   - Nice notifications feedback on build completion
   - Built-in favicons generator
+  - Code splitting ready 🍺
 - CSS structure based on [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) principles
 - Base views provided for header and footer
 - Code linting through [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/)
@@ -129,7 +130,7 @@ npm start
 - `npm run data:img:placeholder` : Create a `.placeholder.{ext}` file by image that represent a mini version of the original one
 - `npm run fractal` : Start the fractal interface
 - `npm run browsersync` : Start the browsersync service on port `8080`
-- `npm start` : Build/monitor src files using coffeekraken-scripts-stack, start the http server as well as the livereload one
+- `npm start` : Build/monitor src files using coffeekraken-scripts-stack, start the http server as well as the browsersync one
 - `npm run server` : Start the http (PHP) server accessible on port `8181`
 - `npm run pretty-quick` : Run prettier on the entire project
 - `npm run pretty-quick-commit` : Run prettier on staged files
