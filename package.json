@@ -63,7 +63,8 @@
     "test": "jest",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint 'src/**/*.js'",
-    "lint:css": "stylelint 'src/sass/**/*.scss'"
+    "lint:css": "stylelint 'src/sass/**/*.scss'",
+    "webpack:stats": "webpack --json > stats.json"
   },
   "pre-commit": [
     "pretty-quick-commit",
@@ -85,19 +86,20 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@webcomponents/webcomponentsjs": "^2.2.0",
+    "axios": "^0.18.0",
     "coffeekraken-gridle": "^3.0.0",
     "coffeekraken-s-activate-component": "^1.1.4",
     "coffeekraken-s-button-component": "^1.0.1",
     "coffeekraken-s-dropdown-component": "^1.0.2",
     "coffeekraken-s-form-component": "^1.0.1",
     "coffeekraken-s-icon-component": "^1.0.1",
-    "coffeekraken-s-one-time-display-component": "^1.0.1",
+    "coffeekraken-s-one-time-display-component": "^1.0.2",
     "coffeekraken-s-slideshow-component": "^1.0.10",
     "coffeekraken-s-table-component": "^1.0.1",
     "coffeekraken-s-tooltip-component": "^1.0.2",
     "coffeekraken-s-typography-component": "^1.0.2",
     "coffeekraken-s-validator-component": "^1.0.7",
-    "coffeekraken-sugar": "^1.0.27",
+    "coffeekraken-sugar": "^1.0.28",
     "coffeekraken-template-stack": "git+https://git@github.com/Coffeekraken/template-stack.git#master",
     "coffeekraken-ww-axios": "^1.0.1",
     "cssuseragent": "^2.1.31",
@@ -158,7 +160,9 @@
     "stylelint": "^9.8.0",
     "stylelint-config-standard": "^18.2.0",
     "webpack": "^4.26.0",
+    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.0.8",
+    "webpack-visualizer-plugin": "^0.1.11",
     "worker-loader": "^2.0.0"
   }
 }

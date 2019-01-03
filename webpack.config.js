@@ -1,3 +1,4 @@
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const path = require('path')
 const webpack = require('webpack')
 const glob = require('glob-all')
@@ -40,5 +41,10 @@ module.exports = {
       }
     ]
   },
-  plugins: [new webpack.IgnorePlugin(/vertx/)]
+  plugins: [
+    new webpack.IgnorePlugin(/vertx/),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false
+    })
+  ]
 }
