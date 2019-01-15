@@ -1,8 +1,4 @@
-{% embed '@default' with {
-  body_class: 'hello',
-  title: 'Hello World',
-  description: 'Ligula per dui potenti felis maecenas mi aliquam tempus orci'
-} %}
+{% embed '@default' with layout %}
 
   {% block body %}
     {% include '@welcome' with _context %}

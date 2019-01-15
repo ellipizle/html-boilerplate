@@ -89,9 +89,13 @@ function exportViews(args, done) {
     const job = item
       .getContent()
       .then(str => {
-        return str.replace(/\@([0-9a-zA-Z\-\_]*)/g, function(match, handle) {
-          const component = collection.find(match)
-          return `${component.relViewPath}`
+        return str.replace(/['"]\@([0-9a-zA-Z\-\_]*)/g, function(
+          match,
+          handle
+        ) {
+          const firstChar = match[0]
+          const component = collection.find(match.substr(1))
+          return `${firstChar}${component.relViewPath}`
         })
       })
       .then(str => {

@@ -137,8 +137,11 @@ npm start
 - `npm run prettier` : Run prettier on the source files
 - `npm run test` : Run the tests
 - `npm run lint` : Run the linters
+- `npm run lint:fix` : Run the lint fixers
 - `npm run lint:js` : Run the Js linter
+- `npm run lint:js:fix` : Run the Js lint fixer
 - `npm run lint:css` : Run the css linter
+- `npm run lint:css:fix` : Run the css lint fixer
 
 <a name="readme-browsers-support"></a>
 

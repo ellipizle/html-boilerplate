@@ -68,6 +68,9 @@
 			<meta itemprop="image" content="{{ sharing_image }}">
 		{% endif %}
 
+    <!-- favicons -->
+    {% include '@favicons' %}
+
 		{% if critical_css %}
 			<style>
 				{{ critical_css | raw }}
